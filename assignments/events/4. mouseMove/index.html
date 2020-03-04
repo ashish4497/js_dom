@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <main></main>
+  <script>
+    var heading = document.createElement("h1");
+    document.body.append(heading);
+    heading.textContent = "Mouse Move Cursor";
+    p1 = document.createElement("p");
+    p2 = document.createElement("p");
+    p3 = document.createElement("p");
+    p4 = document.createElement("p");
+    document.body.append(p1);
+    document.body.append(p2);
+    document.body.append(p3);
+    document.body.append(p4);
+
+    document.onmousemove = function (e) {
+      console.log(e)
+      p1.textContent = e.screenX;
+      p2.textContent = e.screenY;
+      p3.textContent = e.clientX;
+      p4.textContent = e.clientY;
+
+    }
+  </script>
+</body>
+
+</html>
