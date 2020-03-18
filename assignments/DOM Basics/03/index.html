@@ -1,43 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Learning About Nodes</title>
 
-    <style>
-      * {
-        border: 2px solid #dedede;
-        padding: 15px;
-        margin: 15px;
-      }
-      html {
-        margin: 0;
-        padding: 0;
-      }
-      body {
-        max-width: 600px;
-        font-family: sans-serif;
-        color: #333;
-      }
-    </style>
-  </head>
+<head>
+  <title>Learning About Nodes</title>
 
-  <body>
-    <h1>Shark World</h1>
-    <p>
-      The world's leading source on <strong>shark</strong> related information.
-    </p>
-    <h2>Types of Sharks</h2>
-    <ul>
-      <li>Hammerhead</li>
-      <li>Tiger</li>
-      <li>Great White</li>
-    </ul>
-  </body>
+  <style>
+    * {
+      border: 2px solid #dedede;
+      padding: 15px;
+      margin: 15px;
+    }
 
-  <script>
-    const h1 = document.getElementsByTagName("h1")[0];
-    const p = document.getElementsByTagName("p")[0];
-    const ul = document.getElementsByTagName("ul")[0];
-    // Your code goes here
-  </script>
+    html {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      max-width: 600px;
+      font-family: sans-serif;
+      color: #333;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Shark World</h1>
+  <p>
+    The world's leading source on <strong>shark</strong> related information.
+  </p>
+  <h2>Types of Sharks</h2>
+  <ul>
+    <li>Hammerhead</li>
+    <li>Tiger</li>
+    <li>Great White</li>
+  </ul>
+</body>
+
+<script>
+  const h1 = document.getElementsByTagName("h1")[0];
+  const p = document.getElementsByTagName("p")[0];
+  const ul = document.getElementsByTagName("ul")[0];
+  // Your code goes here
+  document.querySelector("ul").firstElementChild.style.backgroundColor = "red";
+  //2
+  var list = document.querySelectorAll("ul");
+  list.forEach((val) => val.style.background = "green");
+  //3
+  list[list.length - 1].style.background = "pink";
+  //4
+  list[1];
+  //5
+  list[1].previousElementSibling.style.background = "coral";
+  list[1].nextElementSibling.style.background = 'aquamarine';
+</script>
+
 </html>

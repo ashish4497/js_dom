@@ -1,16 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>DOM Basics</title>
-  </head>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>DOM Basics</title>
+</head>
+
+<body>
+
   <body>
-    <body>
-      <h1>Document Object Model</h1>
+    <!-- <h1>Document Object Model</h1> -->
+    <div id="parent"></div>
     <script>
       // your code goes here
+      var div = document.createElement('p');
+      div.textContent = 'Hello javaScript';
+      div.innerHTML = `I love <strong>Javascript</strong>`
+      var value = document.getElementById("parent");
+      value.append(div);
+
+
+      var ul = document.createElement('ul');
+      var li = document.createElement('li');
+      li.textContent = 'Buy groceries';
+      ul.append(li);
+      var li2 = document.createElement('li');
+      li2.textContent = 'feed the cat';
+      ul.append(li2);
+      var li3 = document.createElement('li');
+      li3.textContent = 'Do laundry';
+      ul.append(li3);
+      var value = document.getElementById("parent");
+      value.append(ul);
+
+      var ul = document.createElement('ul');
+      var li = document.createElement('li');
+      ul.append(li);
+      ul.removeChild(li);
     </script>
   </body>
+
 </html>
